@@ -1,0 +1,20 @@
+{
+  "name": "css-binary-decoder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A binary decoder built entirely out of css and html (NO JS!)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn nodemon -e js,css --watch scripts --watch src/ --exec \"yarn build && yarn serve\"",
+    "build": "mkdir -p dist/ && node scripts/build-binary-decoder.js && cp src/styles.css dist/styles.css",
+    "build:all": "BUILD_ALL='true' yarn build",
+    "serve": "http-server dist/"
+  },
+  "keywords": [],
+  "author": "Luke Batchelor",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "nodemon": "^1.18.3"
+  }
+}
