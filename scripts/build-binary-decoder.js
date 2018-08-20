@@ -25,7 +25,7 @@ function getNextStates(allStates, curStates, curDepth, maxDepth) {
     newStates.add(`${state}0`);
     newStates.add(`${state}1`);
   });
-  
+
   return getNextStates(new Set([...allStates, ...newStates]), newStates, curDepth + 1, maxDepth);
 }
 
@@ -36,7 +36,7 @@ function statesToHtml(states) {
     const next1StateName = `s${state}1`;
     return `<input type="radio" name="app-state" id="s${state}">
       <div class="state">
-        <div class="answer" data-bin="${state}" data-dec="${decimalNumber}"></div>    
+        <div class="answer" data-bin="${state}" data-dec="${decimalNumber}"></div>
         <label for="${next0StateName}">0</label>
         <label for="${next1StateName}">1</label>
       </div>`;
@@ -52,7 +52,6 @@ function buildDecoderHtml(maxDepth) {
   console.log('  Found ', allStates.size, 'states in ', (endTime - startTime), 'milliseconds');
   console.log('  Mapping to html states...');
   const statesHtml = statesToHtml(Array.from(allStates));
-
   const htmlTemplate = `
     <!DOCTYPE html>
     <html lang="en">
@@ -87,9 +86,9 @@ function buildDecoderHtml(maxDepth) {
   const fileName = maxDepth === 10 ? 'index.html' : `${maxDepth}.html`;
   const outputFilePath = path.join(outputDir, fileName);
   console.log('  Writing to', outputFilePath);
-  
+
   fs.writeFileSync(outputFilePath, htmlTemplate);
-  
+
   console.log('  Total size: ', (htmlTemplate.length / 1000000).toFixed(2), 'mb');
 }
 
