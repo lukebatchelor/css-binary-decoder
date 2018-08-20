@@ -75,7 +75,7 @@ To play with this, we also build multiple versions of the page. The following ar
 |2047        |[link](https://css-binary.netlify.com/)         | 0.52mb|
 |4094        |[link](https://css-binary.netlify.com/11.html)  | 1.06mb|
 |8191        |[link](https://css-binary.netlify.com/12.html)  | 2.15mb|
-|16383       |[link](https://css-binary.netlify.com/12.html)  | 4.38mb|
-|32767       |[link](https://css-binary.netlify.com/12.html)  | 8.90mb|
+|16383       |[link](https://css-binary.netlify.com/13.html)  | 4.38mb|
+|32767       |[link](https://css-binary.netlify.com/14.html)  | 8.90mb|
 
 Bigger than this gets pretty slow to download and run, but feel free to run it yourself locally!
